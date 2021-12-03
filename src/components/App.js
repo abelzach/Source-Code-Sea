@@ -3,6 +3,9 @@ import './App.css';
 import { SpringSpinner } from 'react-epic-spinners';
 import Web3 from 'web3';
 import SourceCodeSea from '../build/SourceCodeSea.json';
+import Create from './create'
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
 class App extends Component {
   async componentWillMount() {
       await this.loadWeb3();
@@ -98,9 +101,17 @@ class App extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-          <h1>Source Code Sea</h1>
-        </nav>
+        <Router>
+          <Route exact path="/create" render={props => (
+              <React.Fragment>
+                {
+                  this.state.loading
+                  ? <div class="center"><SpringSpinner size="100" color="white" /></div>
+                  : <Create createCODE={this.createCODE} />
+                }
+              </React.Fragment>
+            )} /> 
+        </Router>
       </div>
     );
   }
