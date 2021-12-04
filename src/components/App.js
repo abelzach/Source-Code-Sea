@@ -5,6 +5,7 @@ import Web3 from 'web3';
 import SourceCodeSea from '../build/SourceCodeSea.json';
 import Create from './create'
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import Codes from './codes';
 
 class App extends Component {
   async componentWillMount() {
@@ -108,6 +109,15 @@ class App extends Component {
                   this.state.loading
                   ? <div class="center"><SpringSpinner size="100" color="white" /></div>
                   : <Create createCODE={this.createCODE} />
+                }
+              </React.Fragment>
+          )} />
+          <Route exact path="/sale" render={props => (
+              <React.Fragment>
+                {
+                  this.state.loading
+                  ? <div class="center"><SpringSpinner size="100" color="white" /></div>
+                  : <Codes codes={this.state.codes} buyCODE={this.buyCODE} />
                 }
               </React.Fragment>
             )} /> 
