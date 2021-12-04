@@ -6,23 +6,23 @@
 
 
 .login-box{
-    box-shadow: 0 1px 1px 1px rgba(0,0,0,1);
-    width:400px; 
-    padding:40px;
+    box-shadow: 0px 2px 3px 0px rgba(0,0,0,1);
+    width:600px; 
+    padding:20px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    color: #F5F5F5;
+    color: #020101;
   
   }
   .login-box h1{
     
     float: left;
     font-size: 40px;
-    border-bottom: 6px solid #F5F5F5;
-    margin-bottom: 50px;
-    padding: 13px 0;
+    border-bottom: 3px solid #070303;
+    margin-bottom: 5px;
+    padding: 10px 0;
   }
   
   .textbox{
@@ -31,7 +31,7 @@
     font-size: 20px;
     padding: 8px 0;
     margin: 8px 0;
-    border-bottom: 1px solid #F5F5F5;  
+    border-bottom: 1px solid #0a0101;  
   }
   .textbox i{
     width: 26px;
@@ -58,15 +58,14 @@
     font-size: 18px;
     width: 80%;
     float: left;
-    margin: 0 10px;
+    margin: 0 5px;
   } 
   .btn{
     width: 100%; 
-    /* background: green; */
-    /* color: green; */
+     background: rgb(91, 184, 91); 
     border: 2px solid #F5F5F5;
     padding: 5px;
-    font-size: 18px;
+    font-size: 24px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
   }

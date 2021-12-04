@@ -6,6 +6,7 @@ import SourceCodeSea from '../build/SourceCodeSea.json';
 import Create from './create'
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Codes from './codes';
+import Register from './Reg'
 
 class App extends Component {
   async componentWillMount() {
@@ -120,7 +121,16 @@ class App extends Component {
                   : <Codes codes={this.state.codes} buyCODE={this.buyCODE} />
                 }
               </React.Fragment>
-            )} /> 
+          )} />
+          <Route exact path="/register" render={props => (
+            <React.Fragment>
+            {
+                this.state.loading
+                ? <div class="center"><SpringSpinner size="100" color="white" /></div>
+                : <Register registerProgrammer={this.registerProgrammer} />
+            }
+            </React.Fragment>
+        )} />
         </Router>
       </div>
     );
