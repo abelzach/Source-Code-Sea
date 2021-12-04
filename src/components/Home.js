@@ -1,6 +1,7 @@
 import React from "react";
-import "../css/home.css";
-
+import "./home.css";
+import pic from "./pic.jpg"
+import picc from './picc.jpg'
 const Home = () => {
   return (
     <>
@@ -11,8 +12,10 @@ const Home = () => {
             <div className="col-md-5 col-sm-3"></div>
             <div className="col-md-7 col-sm-9">
               <h3>Welcome to</h3>
-              <h1>Source-Code-Sea</h1>
+              <h1>Source Code Sea</h1>
+              <br/>
             </div>
+            <h3>Decentralised Source code selling platform using blockchain technology</h3>
           </div>
         </div>
       </div>
@@ -58,7 +61,7 @@ const Home = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6 col-sm-12">
-              <img src="" className="img-responsive" alt="about img" />
+              <img src={picc} className="img-responsive" alt="about img" />
             </div>
             <div className="col-md-6 col-sm-12 about-des">
               <h2>Protection</h2>
@@ -81,7 +84,7 @@ const Home = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6 col-sm-12">
-              <img src="" className="img-responsive" alt="about img" />
+              <img src={pic} className="img-responsive" alt="about img" />
             </div>
             <div className="col-md-6 col-sm-12 about-des">
               <h2>How it can be solved</h2>

@@ -1,0 +1,42 @@
+/* Styles go here */
+nav {
+    background: var(--text-variant);
+    color: var(--primary-variant);
+    z-index: 1;
+  }
+  
+  .navbar {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  
+  .navbar-brand {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #659fe2;
+  }
+  
+  .navlink-border:hover {
+    border-bottom: 2px solid var(--primary-variant);
+  }
+  
+  .nav-link {
+    font-size: 1.5 rem;
+    font-weight: normal;
+    color: var(--primary-variant);
+  }
+  
+  .navbar-toggler i {
+    color: #a1b3d4;
+  }
+  
+  .navbar-brand:hover,
+  .nav-link:hover,
+  .navbar-toggler i:hover {
+    color: #000;
+    opacity: 0.65;
+  }
+  
+  a.nav-link.px-4 {
+    margin-top: 20px;
+  }

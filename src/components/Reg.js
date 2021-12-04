@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./reg.css"
+import Typography from "@material-ui/core/Typography";
 
 class Register extends Component {
 
@@ -8,9 +9,12 @@ class Register extends Component {
      this.nameinput = React.createRef();
    }  
    render() {
-    return (
+       return (
+           <div id="nav">
         <div className = "login-box">
-                <h1>Register as a Programmer</h1>
+        <Typography component="h1" variant="h5">
+            <h1 style={{color: 'black'}}>Register as a Programmer</h1>                    
+        </Typography>
             <form onSubmit={(event)=>{
                 event.preventDefault();
                 const name = this.nameinput.current.value
@@ -24,10 +28,15 @@ class Register extends Component {
                 </div>
                 <br/>
 
-                <button type="button" className = "btn">Register</button>
+                <button className="btn">
+                <Typography >
+                    <h4 style={{color: 'black'}}>Register</h4>                    
+                </Typography>           
+                </button>
                 </center>
             </form>
-        </div>
+               </div>
+               </div>
    );
     }
 }

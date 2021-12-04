@@ -3,6 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import background from './pic2.jpg'
+import Typography from "@material-ui/core/Typography";
+
 
 class Codes extends Component {
 
@@ -25,7 +27,9 @@ class Codes extends Component {
             <React.Fragment>
             <div className="container-fluid mt-4" style={{ textAlign: 'center' }}>
                 <div className="row">
+                    <br/>
                     <main role="main" className="col-lg-12 ml-auto mr-auto" style={{ margin: '0% 10%' }}>
+                        <br/>
                         <h1>Purchase Source Codes</h1>
                         <br />
                         <input placeholder="Enter title to search" style={{ width: '60%', margin: 'auto' }} type="text" class="form-control" value={this.state.search} onChange={this.updateSearch.bind(this)} />
@@ -48,12 +52,16 @@ class Codes extends Component {
                                         <Card.Subtitle className="mb-2 text-muted">Price: {window.web3.utils.fromWei(code.price.toString(), 'Ether')} CELO</Card.Subtitle>
                                         <br/>
                                         <Button
-                                            variant='primary'
+                                            class="btn btn-info"
+                                            type="submit"
                                             name={code.id}
                                             onClick={(event) => {
                                             this.props.buyCODE(event.target.name, window.web3.utils.fromWei(code.price.toString()))
                                             }}>
-                                            Purchase Source Code
+                                                    <Typography component="h1" variant="h5">
+                                                        <h4 style={{color: 'black'}}>Purchase Source Code</h4>                    
+                                                    </Typography>
+                                            
                                         </Button>
                                     </Card.Body>
                                 </Card>
