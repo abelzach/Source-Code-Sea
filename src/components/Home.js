@@ -2,7 +2,19 @@ import React from "react";
 import "./home.css";
 import pic from "./pic.jpg"
 import picc from './picc.jpg'
+import Typography from "@material-ui/core/Typography";
+import LinearProgress from '@material-ui/core/LinearProgress';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+  footer: {
+    backgroundColor: theme.palette.background.paper,
+    padding: theme.spacing(6),
+  },
+}));
+
 const Home = () => {
+  const classes = useStyles();
   return (
     <>
 
@@ -109,6 +121,14 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <footer className={classes.footer}>
+     
+        <LinearProgress color="secondary"/>
+        <br/>
+        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
+        © 2021 Source Code Sea
+        </Typography>
+      </footer>
       </div>
     </>
   );
