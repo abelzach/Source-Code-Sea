@@ -40,18 +40,16 @@ const Home = () => {
                 <i className="fa fa-laptop"></i>
                 <h2>Data Protection</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                  diam nonummy nibh euismod tincidunt ut laoreet.
+                Tamperproof transactions which require no third-party payment system. 
                 </p>
               </div>
             </div>
             <div className="col-md-4 col-sm-6">
               <div className="divider-wrapper divider-two">
                 <i className="fa fa-mobile"></i>
-                <h2>Easy to use</h2>
+                <h2>Why NFT?</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                  diam nonummy nibh euismod tincidunt ut laoreet.
+                NFTs can have only one owner at a time. They get exclusive ownership rights NFTs’ unique data makes it easy to verify their ownership and transfer tokens between owners. 
                 </p>
               </div>
             </div>
@@ -60,8 +58,7 @@ const Home = () => {
                 <i className="fa fa-life-ring"></i>
                 <h2>Sustainable</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                  diam nonummy nibh euismod tincidunt ut laoreet.
+                Sustainable way for code ownership to be recognized and adhered to.
                 </p>
               </div>
             </div>
@@ -123,10 +120,11 @@ const Home = () => {
         </div>
         <footer className={classes.footer}>
      
-        <LinearProgress color="secondary"/>
+        <LinearProgress color="primary"/>
         <br/>
         <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-        © 2021 Source Code Sea
+            © 2021 Source Code Sea by
+            Crypto Squad
         </Typography>
       </footer>
       </div>

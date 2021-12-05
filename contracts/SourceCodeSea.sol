@@ -81,7 +81,7 @@ contract SourceCodeSea is ERC721, ERC721URIStorage {
         emit createdCODE(sCount, codes[sCount].name, codes[sCount].owner);
     }
 
-    function buyCODE(uint _id) external payable idExists(_id) {
+    function buyCODE(uint256 _id) external payable idExists(_id) {
         require(msg.value >= codes[_id].price, "Insufficient amount");
         codes[_id].owner.transfer(msg.value);
         _safeMint(msg.sender, _id);

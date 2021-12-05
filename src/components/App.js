@@ -9,6 +9,8 @@ import Codes from './codes';
 import Register from './Reg'
 import Home from './Home'
 import Navbar from './Navbar'
+import Mycodes from './Mycodes'
+
 class App extends Component {
   async componentWillMount() {
       await this.loadWeb3();
@@ -61,13 +63,13 @@ class App extends Component {
       this.state.SCS.methods.createCODE(name, desc, filecid, window.web3.utils.toWei(price.toString())).send({ from: this.state.account })
           .once('confirmation', (n, receipt) => {
               this.setState({ loading: false });
-              window.location.href = '/'
+              window.location.href = '/sale'
           })
   }
 
-  registerArtist(name) {
+  registerProgrammer(name) {
       this.setState({ loading: true });
-      this.state.SCS.methods.registerArtist(name).send({ from: this.state.account })
+      this.state.SCS.methods.registerProgrammer(name).send({ from: this.state.account })
           .once('confirmation', (n, receipt) => {
               this.setState({ loading: false });
               window.location.reload();
@@ -80,7 +82,7 @@ class App extends Component {
           .once('confirmation', (n, receipt) => {
               this.setState({ loading: false });
               window.location.reload();
-              window.location.href = '/'
+              window.location.href = '/mycodes'
           })
   }
 
@@ -92,10 +94,9 @@ class App extends Component {
           codes: [],
           mycodes: [],
           loading: false,
-          orgBalance: 0
       }
 
-      this.registerArtist = this.registerArtist.bind(this);
+      this.registerProgrammer = this.registerProgrammer.bind(this);
       this.createCODE = this.createCODE.bind(this);
       this.buyCODE = this.buyCODE.bind(this);
   }
@@ -135,7 +136,17 @@ class App extends Component {
                 : <Register registerProgrammer={this.registerProgrammer} />
             }
             </React.Fragment>
-        )} />
+          )} />
+          <Route exact path="/mycodes" render={props => (
+                    <React.Fragment>
+                    {
+                        this.state.loading
+                        ? <div class="center"><SpringSpinner size="100" color="white" /></div>
+                    :<Mycodes mycodes={this.state.mycodes}/>
+                    }
+                    </React.Fragment>
+                )} />
+
         </Router>
       </div>
     );
