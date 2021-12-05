@@ -14,3 +14,44 @@ Any user can register as a programmer on the platform and tokenize their program
 Now the Source code is available for sale on the platform, where other users can view and purchase them. Once a user buys an Source code from the platform, the amount is directly transferred to the owner, significantly faster than conventional methods with end-to-end encryption.
 By incorporating blockchain into our project we were able to achieve tamperproof transactions which require no third-party payment system. Payment between buyers and sellers is direct, no intermediary has any role to play.
 
+<br/>
+
+## Steps to Run Source Code Sea DApp
+
+### Install Requirements
+
+Node JS - [node](https://nodejs.org/en/download/)
+
+Celo Extension Wallet and set network as Alfajores Test Network.
+
+### Clone the repo
+
+```
+$ git clone https://github.com/abelzach/Source-Code-Sea
+
+$ cd Source-Code-Sea
+```
+
+### Install Dependencies
+
+```
+$ npm install -g truffle
+
+$ npm install
+```
+
+- Create a .secret file in the root directory of the repo and enter your Celo account private key.
+- Create a .env file in the root directory and set environment variable.
+
+```
+REACT_APP_NFTKEY = 'NFT.Storage API Key'
+```
+
+### Deploy Smart contract and Run the DApp
+
+```
+$ truffle migrate --network alfajores
+
+$ npm start
+```
+- Visit localhost:3000 in your browser and connect your Celo extension wallet account.
