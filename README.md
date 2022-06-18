@@ -55,3 +55,7 @@ $ truffle migrate --network alfajores
 $ npm start
 ```
 - Visit localhost:3000 in your browser and connect your Celo extension wallet account.
+
+---
+
+[Project Demo Video](https://www.youtube.com/watch?v=zkpKQWOias4)
