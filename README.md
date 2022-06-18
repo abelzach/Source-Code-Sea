@@ -15,6 +15,7 @@ Now the Source code is available for sale on the platform, where other users can
 By incorporating blockchain into our project we were able to achieve tamperproof transactions which require no third-party payment system. Payment between buyers and sellers is direct, no intermediary has any role to play.
 
 <br/>
+---
 
 ## Steps to Run Source Code Sea DApp
 
