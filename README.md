@@ -1,5 +1,6 @@
 # Source Code Sea
 ---
+https://www.youtube.com/watch?v=zkpKQWOias4&t=24s
 
 A Decentralized platform to tokenise source codes as NFTs and sell them to generate revenue.
 
